@@ -40,9 +40,9 @@ function setup() {
 function draw() {
 
 	Ball();
-	leftPaddle();
-	rightPaddle();
-	hitDetection();
+	PaddleL();
+	PaddleR();
+	//hitDetection();
 
 }
 
@@ -55,14 +55,14 @@ function Ball() {
     ball.y = ball.y + speedY;
 }
 
-function leftPaddle() {
+function PaddleL() {
 
 	fill(255);
 	rect(leftPaddle.x, leftPaddle.y, leftPaddle.w, leftPaddle.h);
 
 }
 
-function rightPaddle() {
+function PaddleR() {
 
 	fill(255);
 	rect(rightPaddle.x, rightPaddle.y, rightPaddle.w, rightPaddle.h);	
