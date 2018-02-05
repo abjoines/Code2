@@ -70,7 +70,33 @@ function PaddleR() {
 }
 
 // function hitDetection() {
+	/*hit detection stuff ?????
+		//top bottom
+		if ((ball.y > height) || (ball.y < 0)) {
+    		ball.speedY *= -1;
+  		} 	
 
+		//reset
+  		if ((ball.x > width) || (ball.x < 0)) {
+    		ball.x = 250;
+    		ball.y = 250;
+    		background(0);
+  		}
+
+  		//paddle collisions
+  		if((ball.x <= 20)
+    		&&(ball.y >= leftPaddle.y - leftPaddle.h/2) 
+    		&&(ball.y <= leftPaddle.y + leftPaddle.h/2)){
+     			ball.speedX *= -1;
+     		}
+
+    	else if((ball.x >= 480) {
+    		&&(ball.y >= rightPaddle.y - rightPaddle.h/2) 
+    		&&(ball.y <= rightPaddle.y + rightPaddle.h/2)){
+     			ball.speedX *= -1;
+     		}
+     		*/
+     		
 
 // }
 
@@ -104,32 +130,3 @@ function keyReleased() {
     p2Down = false;
   }
 }
-
-
-/*hit detection stuff 
-		//top bottom
-		if ((ball.y > height) || (ball.y < 0)) {
-    		ball.speedY *= -1;
-  		} 	
-
-		//reset
-  		if ((ball.x > width) || (ball.x < 0)) {
-    		ball.x = 250;
-    		ball.y = 250;
-    		background(0);
-  		}
-
-  		//paddle collisions
-  		if((ball.x <= 20)
-    		&&(ball.y >= leftPaddle.y - leftPaddle.h/2) 
-    		&&(ball.y <= leftPaddle.y + leftPaddle.h/2)){
-     			ball.speedX *= -1;
-     		}
-
-    	else if((ball.x >= 480) {
-    		&&(ball.y >= rightPaddle.y - rightPaddle.h/2) 
-    		&&(ball.y <= rightPaddle.y + rightPaddle.h/2)){
-     			ball.speedX *= -1;
-     		}
-     		*/
-     		
