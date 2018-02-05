@@ -26,10 +26,10 @@ var rightPaddle = {
 	h : 80,
 };
 
-p1Up = false;
-p1Down = false;
-p2Up = false;
-p2Down = false;
+var p1Up = false;
+var p1Down = false;
+var p2Up = false;
+var p2Down = false;
 
 
 function setup() {
