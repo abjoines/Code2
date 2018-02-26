@@ -43,7 +43,7 @@ function draw() {
 
   student.update();
   student.display();
-  // student.collided();
+  //student.collided();
 
 }
 
