@@ -71,6 +71,9 @@ function drawScene(whichScene) {
           background(0);
           drawField();
 
+          p1Score = 0;
+          p2Score = 0;
+
           text("PRESS ANY KEY TO START", width/2, height/2);
 
       break;
