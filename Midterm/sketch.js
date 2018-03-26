@@ -16,7 +16,6 @@ function setup() {
 
 function draw() {
   scenes[currentScene].display();
-
 }
 
 function CreateScenesFromData(data) {
@@ -34,12 +33,14 @@ function Scene(sceneText, nextScene, NCo, xNum, radNum) {
 
 
   this.display = function() {
-    stroke(0, 140, 168, 10);
     fill(0, 140, 168)
-    textSize(32);
-    text(this.sceneText, 100, 100);
+    noStroke();
+    textSize(20);
+    text(this.sceneText, 100, 600);
 
     noFill();
+    stroke(0, 140, 168, 10);
+
     translate(width/2, height/2);
     beginShape();
     for (var i = 0; i < 200; i++) {
@@ -48,7 +49,7 @@ function Scene(sceneText, nextScene, NCo, xNum, radNum) {
       var x = rad * cos(ang);
       var y = rad * sin(ang);
       var N = noise(i * 0.5 * this.radNum);
-      curveVertex(x * 5, y * N*this.NCo);
+      curveVertex(x*this.xNum * 5, y * N*this.NCo);
     }
     endShape(CLOSE);
 
@@ -59,7 +60,7 @@ function Scene(sceneText, nextScene, NCo, xNum, radNum) {
       var x = rad * cos(ang);
       var y = rad * sin(ang);
       var N = noise(i * 0.5 * this.radNum);
-      curveVertex(x * 5, y * N*this.NCo);
+      curveVertex(x*this.xNum * 5, y * N*this.NCo);
     }
     endShape(CLOSE);
 

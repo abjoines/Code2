@@ -1,42 +1,42 @@
 {
 	"scenes": [
 		{
-		"sceneText": "WAVES: Press 1 to increase amplitude and frequency",
+		"sceneText": "WAVES: PRESS 1 TO ADVANCE. \nNEXT: increase amplitude and frequency",
 		"nextScene": [1],
 		"NCo": 1,
 		"xNum": 1,
 		"radNum": 400 
 		},
 		{
-		"sceneText": "Press 1 to decrease aplitude and frequency",
+		"sceneText": "NEXT: \ndecrease aplitude and frequency",
 		"nextScene": [2],
 		"NCo": 5,
 		"xNum": 1,
 		"radNum" : 400 
 		},
 		{
-		"sceneText": "Press 1 to increase frequency",
+		"sceneText": "NEXT: \nincrease frequency",
 		"nextScene": [3],
 		"NCo": 1,
 		"xNum": 10,
 		"radNum": 400
 		},
 		{
-		"sceneText": "Press 1 to condense wave",
+		"sceneText": "NEXT: \ncondense wave",
 		"nextScene": [4],
 		"NCo": 0.25,
 		"xNum": 1,
 		"radNum": 500
 		},
 		{
-		"sceneText": "Press 1 to return to original",
+		"sceneText": "NEXT: \nreturn to original",
 		"nextScene": [5],
 		"NCo": 1,
 		"xNum": 0.5,
 		"radNum": 200
 		},
 		{
-		"sceneText": "TO RESTART PRESS 1",
+		"sceneText": "RESTART",
 		"nextScene": [0],
 		"NCo": 1,
 		"xNum": 1,
