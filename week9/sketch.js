@@ -10,11 +10,12 @@ var buttonElement;
 var cityElement;
 
 function setup() {
+	cityElement = createInput('City Name');
+	
 	buttonElement = createButton('Select');
 	buttonElement.mousePressed(onButtonPressed);
 		buttonElement.style.padding = '50px'; 
-
-	cityElement = createInput('City Name');
+	
 	createElement('br');
 	createElement('br');
 
