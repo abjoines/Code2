@@ -8,7 +8,7 @@ var units =  '&units=metric';
 function setup() {
 	createCanvas(500,400);
 	var url = api + city + apiKey + units;
-	loadJSON(url, gotData);
+	loadJSON(url, gotData, 'jsonp');
 
 }
 
