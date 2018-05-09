@@ -48,17 +48,11 @@ function drawScene(whichScene){
 		case sceneState.PLATONIC:
 			camera1();
 			lights();
-
 			tetra(-16, -10);
-
 			cube(-8, -10);
-
 			octa(0, -10);
-
 			dodeca(8, -10);
-
 			icosa(16, -10)
-
 
 			scene.add(tetrahedron);
 			scene.add(cube);
