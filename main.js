@@ -1,6 +1,14 @@
 var currentScene = 0;
 var scenes = [];
 var keyOn = false;
+var pentPrism;
+var tube1;
+var icosahedron;
+var dodecahedron;
+var octahedron;
+var cube;
+var tetrahedron;
+var torus;
 
 var sceneState ={
 	HOME: 0,
@@ -38,12 +46,12 @@ function setUpScene(whichScene) {
 		case sceneState.HOME:
 			var octa = new THREE.OctahedronGeometry(5);
 			var material = new THREE.MeshLambertMaterial( {color: 0x25d2f9});
-			var octahedron = new THREE.Mesh(octa, material);
+			octahedron = new THREE.Mesh(octa, material);
 			octahedron.position.z = -10;
 
 			var object = new THREE.TorusGeometry(8, 0.1, 16, 100);
 			var material = new THREE.MeshLambertMaterial( {color: 0xc15aed});
-			var torus = new THREE.Mesh(object, material);
+			torus = new THREE.Mesh(object, material);
 			torus.position.z = -10;
 			torus.rotation.x = -45;
 
@@ -131,7 +139,7 @@ function keyPressed() {
 function tetra (x, z){
 	var tetra = new THREE.TetrahedronGeometry(2.25);
 	var material = new THREE.MeshLambertMaterial( {color: 0x25d2f9});
-	var tetrahedron = new THREE.Mesh(tetra, material);
+	tetrahedron = new THREE.Mesh(tetra, material);
 	tetrahedron.position.x = x;
 	tetrahedron.position.z = z;
 }
@@ -139,7 +147,7 @@ function tetra (x, z){
 function cube (x, z){
 	var box = new THREE.BoxGeometry(3,3,3);
 	var material = new THREE.MeshLambertMaterial( {color: 0x25d2f9});
-	var cube = new THREE.Mesh(box, material);
+	cube = new THREE.Mesh(box, material);
 	cube.position.x = x;
 	cube.position.z = z;
 }
@@ -147,7 +155,7 @@ function cube (x, z){
 function octa (x, z){
 	var octa = new THREE.OctahedronGeometry(2.5);
 	var material = new THREE.MeshLambertMaterial( {color: 0x25d2f9});
-	var octahedron = new THREE.Mesh(octa, material);
+	octahedron = new THREE.Mesh(octa, material);
 	octahedron.position.z = x;
 	octahedron.position.z = z;
 }
@@ -155,7 +163,7 @@ function octa (x, z){
 function dodeca (x, z){
 	var dodeca = new THREE.DodecahedronGeometry(2.5);
 	var material = new THREE.MeshLambertMaterial( {color: 0x25d2f9});
-	var dodecahedron = new THREE.Mesh(dodeca, material);
+	dodecahedron = new THREE.Mesh(dodeca, material);
 	dodecahedron.position.x = x;
 	dodecahedron.position.z = z;
 }
@@ -163,7 +171,7 @@ function dodeca (x, z){
 function icosa (x, z){
 	var icosa = new THREE.IcosahedronGeometry(2.25);
 	var material = new THREE.MeshLambertMaterial( {color: 0x25d2f9});
-	var icosahedron = new THREE.Mesh(icosa, material);
+	icosahedron = new THREE.Mesh(icosa, material);
 	icosahedron.position.x = x;
 	icosahedron.position.z = z;
 }
@@ -172,7 +180,7 @@ function icosa (x, z){
 function tube (x, y, z) {
 	var cylinder = new THREE.CylinderGeometry( 0.25, 0.25, 100, 6 );
 	var material = new THREE.MeshLambertMaterial( {color: 0xc15aed} );
-	var tube1 = new THREE.Mesh(cylinder, material);
+	tube1 = new THREE.Mesh(cylinder, material);
 	tube.position.x = x;
 	tube.position.y = y;
 	tube.position.z = z;
@@ -181,11 +189,10 @@ function tube (x, y, z) {
 function pentPrism (x, z){
 	var geometry = new THREE.CylinderGeometry( 2, 2, 5, 5 );
 	var material = new THREE.MeshNormalMaterial( {color: 0x25d2f9} );
-	var pentPrism = new THREE.Mesh(geometry, material);
+	pentPrism = new THREE.Mesh(geometry, material);
 	pentPrism.position.x = x;
 	pentPrism.position.z = z;
 }
-
 //ANIMATION
 
 var animate = function() {
@@ -231,4 +238,3 @@ var animate = function() {
 		scene.add(tube);
 		scene.add(tube);
 		scene.add(torus);
-
