@@ -1,0 +1,28 @@
+body {
+	margin: 0;
+	overflow: hidden;
+	}
+
+h1 {
+	color:white;
+	font-size:130px;
+	}
+
+h2 {
+	color:white;
+}
+
+p {
+	color:white;
+}
+
+#title {
+	position: absolute;
+	top: 270px;
+	width: 100%;
+	text-align: center;
+	z-index: 100;
+	display:block;
+	font-size:130px;
+	font-family: 'Roboto', sans-serif;
+	}
